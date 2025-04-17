@@ -1,0 +1,183 @@
+# number = int(input("Please type in a number: "))
+# if number>100:
+#     print("The number was greater than one hundred")
+#     number -= 100
+#     print("Now its value has decreased by one hundred")
+#     print(f"Its value is now {number}")
+#     print(f"{number} must be my lucky number!")
+#     print("Have a nice day!")
+
+# word = "abcd"
+# print(len(word))
+#
+# print(len("hi there"))
+#
+# word2 = "howdydoody"
+# length = len(word2)
+# print(length)
+
+# continue_ = input("Type [enter/return] to play: ")
+# while continue_=="" or continue_=="1":
+#     word = input("Please enter a word: ")
+#     if len(word)>1:
+#      print(f"The number of characters in your word is: {len(word)}")
+#     continue_ = input("Type 1 to go again and 0 to stop: ")
+#     if(continue_=="0"):
+#         print("Thank you for playing!")
+
+# temperature = float(input("Please type in a temperature: "))
+# print("The temperature is", temperature)
+# print(f"Integer part: { int(temperature)}",)
+# decimal = temperature - int(temperature)
+# print(f"Decmal part: {decimal}")
+
+# x = 3
+# numbers = []
+# for i in range(x):
+#     num = int(input("Please enter three numbers: "))
+#     numbers.append(num)
+# print(numbers)
+# total = sum(numbers)
+# print(f"The average is: {sum(numbers)/len(numbers)}")
+# num4 = int(input("Please enter another number: "))
+# print(f"The difference between the last number entered and the average of the 3 previosly entered: {sum(numbers)/len(numbers) - num4}" )
+#
+
+# value = int(input('Enter a value: '))
+# value1 = int(input('Enter a value: '))
+# while value >= value1:
+#     print('the second value must be larger')
+#     value = int(input('Re-enter a value: '))
+#     value1 = int(input('Re-enter a value: '))
+#
+#     if value < value1:
+#         print(f'the sum is: {value + value1}')
+#         print(f'the difference is: {(value1 - value)}')
+#         print(f'the average is: {(value1 + value)/2}')
+# print(f"Toss number {i + 1} is: {random.randint(1, 6)} ")
+# import random
+# countHeads = ""
+# countTails = ""
+# tosses = int(input("Enter number of tosses: "))
+# print("The outcomes are:")
+# for i in range(tosses):
+#     if i%2 == 0:
+#         print("H")
+#         countHeads += "X"
+#     elif i%2 !=0:
+#         print("T")
+#         countTails += "X"
+#
+# print(f"Heads = {countHeads}")
+# print(f"Tails = {countTails}")
+
+# num = int(input("Enter a number: "))
+# x = 0
+# numDiv = []
+# print("Divisors: ")
+# while x<=num:
+#     x += 1
+#     if num%x == 0:
+#         print(x)
+#         numDiv.append("x")
+# print(numDiv.count("x"))
+
+# list = []
+# x = int(input("How many items: "))
+# for i in range(x):
+#     num = int(input(f"Item {i+1}: "))
+#     list.append(num)
+# print(list)
+
+
+# def sum_range(par1):
+#     count_integers = 0
+#     sum1 = 0
+#     for i in range(1, par1):
+#         count_integers += 1
+#         if count_integers <= par1:
+#             sum1 += i
+#     return f"The sum is: {sum1}"
+#
+# print(sum_range(int(input("Enter a value: "))))
+#----------------------------
+# def function(var1):
+#     counter = 0
+#     for i in range(1, var1+1):
+#         if i%3==0 and i%7==0 and i%5!=0:
+#             counter += 1
+#     return f"The number of integers divisible by 3 and 7 but not 5 is: {counter}"
+# while True:
+#     try:
+#         var = int(input("Enter a number: "))
+#         if var == 0:
+#             print("Enter a number different from zero!")
+#         else:
+#           break
+#     except ValueError:
+#         print("Enter integer values only!")
+# print(function(var))
+#
+# def function2(var2):
+#     counter2 = 0
+#     for i in range(1, var2+1):
+#         i+=1
+#         if i%3==0 and i%7==0 and i%5!=0:
+#             counter2 += 1
+#     return f"The number of integers divisible by 3 and 7 but not 5 is: {counter2}"
+# def checker():
+#     while True:
+#         try:
+#             x = int(input("Enter a number: "))
+#             if x == 0:
+#              print("Enter a number different from zero!")
+#             else:
+#                 return x
+#         except ValueError:
+#             print("Enter integer values only!")
+#
+# true = 0
+# while true == 0:
+#     try:
+#        number = checker()
+#        true = 1
+#     except ValueError:
+#       print("\nEnter integer numbers only!")
+# if true == 1:
+#     print(function2(number))
+#----------------------------
+# import random
+#
+# def random_list(entries):
+#     randlist= [ ]
+#     for i in range(entries):
+#         randlist.append(random.randint(1,100))
+#     for i,x in enumerate(randlist):
+#             print(f"Element {i} of the list: {x}")
+#
+# while True:
+#         try:
+#             entries = int(input("Enter number of entries: "))
+#             if entries <= 0:
+#                 print("Enter a positive value higher than 0.")
+#             else:
+#                 break
+#         except ValueError:
+#             print("Only integer values are accepted! ")
+#
+# random_list(entries)
+# -------------------------------------
+# def FirstLast(word):
+#     word = word.upper()
+#     return f"First letter: {word[0]}", f"Last letter {word[-1]}"
+#
+# while True:
+#     sentence = str(input("Enter a sentence: "))
+#     if not sentence:
+#         print("Try Again.")
+#     else:
+#         break
+# print(FirstLast(sentence))
+
+def FirstLast2(word, x = 0, y = 1):
+    return
