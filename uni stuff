@@ -181,3 +181,23 @@
 
 def FirstLast2(word, x = 0, y = 1):
     return
+
+def dictCreator(par):
+    dict1 = dict()
+    for i in range(1,par):
+        dict1[i] = (i/2)**3
+    return dict1
+def show(dict2):
+   for k,v in dict2.items():
+       print(f"{k}\t{v}")
+while True:
+    try:
+        var = int(input("Enter a number: "))
+        if var == 0:
+            print("Enter a number different from zero!")
+        else:
+          break
+    except ValueError:
+        print("Enter integer values only!")
+output = dictCreator(var)
+show(output)
