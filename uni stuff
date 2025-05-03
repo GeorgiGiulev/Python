@@ -201,3 +201,93 @@ while True:
         print("Enter integer values only!")
 output = dictCreator(var)
 show(output)
+
+
+def delete(dict1 : dict, keys : list):
+#     deleted_items = {}
+#     for key in keys:
+#         if key in dict1:
+#             deleted_items[key] =  dict1.pop(key)
+#     if deleted_items:
+#         print("Deleted items: ")
+#         for key, value in deleted_items.items():
+#             print(f"{key}: {value}")
+#     else:
+#         print("No deleted items")
+#
+#     return dict1
+#
+# dict2 = {}
+# x = int(input("Enter the length: "))
+#
+# for i in range(x):
+#     dict2[i] = input(f"Enter value {i}: ")
+# keysDel = []
+# y = int(input("Enter how many items to delete: "))
+# for i in range(y):
+#     keysDel.append(int(input(f"Enter key {i}: ")))
+# final_dict = delete(dict2, keysDel)
+# print(f"The final result is: {final_dict}")
+
+# def freq(word : str) -> dict:
+#     freqDict = {}
+#     for char in word:
+#         if char in freqDict:
+#             freqDict[char] += 1
+#         else:
+#             freqDict[char] = 1
+#
+#     return freqDict
+# text = str(input("Enter a word: "))
+# output = freq(text)
+# for char, count in output.items():
+#     print(f"{char}: {count}")
+
+
+
+class  Person:
+    def __init__(self, nat, FirstName="", LastName=""):
+        self.name = FirstName
+        self.lastName = LastName
+        self.nationality = nat
+        self.height = 0
+        self.weight = 0
+    def BMI(self):
+        bmi_value = self.weight / (self.height/100)**2
+        return bmi_value
+    def __str__(self):
+        t = (self.name + " " + self.lastName + " (" + str(self.height) + " cm, "
+             + str(self.weight) + "kg, has a Body Mass Index of " +
+             str(round(self.BMI(), 1)) + ")")
+        return t
+MyPresident = Person("english")
+MyDirector = Person("mexican")
+MyAssistant = Person("french")
+MyBoss = Person("english", "Mary","White")
+MyBoss.height = 183
+MyBoss.weight = 70.6
+
+print(MyBoss)
+
+class Student(Person):
+    def __init__(self, IDnum, nat, FirstName="", LastName=""):
+        Person.__init__(self, nat, FirstName, LastName)
+        self.ID_number = IDnum
+    def __str__(self):
+        t = (self.name + " " + self.lastName + " - " + "student ID " + self.ID_number)
+        return t
+    def welcome(self):
+        w = ("Hello, my name is " + self.name)
+        return w
+MyDirector = Person ("mexican", "Juan Esteban", "Gonzales")
+MyDirector.height = 169
+MyDirector.weight = 71.4
+print(MyDirector)
+
+MyMate = Student("123456", "italian", "Mario", "Rossi")
+MyMate.height = 169
+MyMate.weight = 71.4
+print(MyMate)
+print(f"The Body Mass Index of my {MyMate.name} is {round(MyMate.BMI())}")
+print(MyMate.welcome())
+
